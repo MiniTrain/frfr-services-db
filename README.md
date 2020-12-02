@@ -19,7 +19,7 @@ docker build -t frfr-services-db .
 Run the image using the Docker command below.  This will start the container named frfr-services-db on port 5432
 with username frfr-services and password frfr-services.
 ```
-docker run --name frfr-services-db --env POSTGRES_USER=frfr_services_app_user --env POSTGRES_PASSWORD=frfr_services_app_user --publish 5432:5432 --detach frfr-services-db
+docker run --name frfr-services-db --env POSTGRES_USER=frfr_services --env POSTGRES_PASSWORD=frfr_services --publish 5432:5432 --detach frfr-services-db
 ```
 <br/>
 
@@ -35,7 +35,7 @@ docker stop frfr-services-db
 
 ### JDBC Connection Info
 ```
-JDBC Url: jdbc:postgresql://localhost:5432/frfr
+JDBC Url: jdbc:postgresql://localhost:5432/frfr_services?currentSchema=frfr
 Username: frfr_services_app_user
 Password: frfr_services_app_user
 ```
